@@ -1,0 +1,26 @@
+class PointInteret{
+    string nom;
+    string descriptif; 
+    Categorie categorie;
+    Adresse adresse; 
+}
+
+class Commune{
+    string nomCommune; 
+    int latCommune; 
+    int lngCommune; 
+
+}
+
+class Categorie{
+    string nomCategorie; 
+    string descriptifCategorie; 
+}
+
+class Adresse{
+    string texte; 
+    double zip; 
+    Commune commune; 
+    int latitude; 
+    int longitude; 
+}
