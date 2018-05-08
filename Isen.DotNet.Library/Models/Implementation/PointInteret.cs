@@ -7,8 +7,8 @@ namespace Isen.DotNet.Library.Models.Implementation
     {
         
         public string Nom { get; set; }
-        public Adresse _Adresse { get; set; }
-        public Categorie categorie { get; set; }
+        public Adresse Adresse { get; set; }
+        public Categorie Categorie { get; set; }
         //public City City { get;set; }
         //public int? CityId { get;set; }
 
@@ -21,8 +21,8 @@ namespace Isen.DotNet.Library.Models.Implementation
         
         public override string Name 
         {
-            get { return _nom ?? $" {Nom}"; }
-            set { _nom = value; }
+            get { return Nom ?? $" {Nom}"; }
+            set { Nom = value; }
         }
 
         public override string Descriptif
@@ -38,8 +38,8 @@ namespace Isen.DotNet.Library.Models.Implementation
         {
             var response = base.ToDynamic();
             response.nom = Nom;
-            //response.age = Age;
-            //response.city = City?.ToDynamic();
+            response.categorie = Categorie;
+            response.adresse = Adresse;
             return response;
         }
     }

@@ -11,6 +11,8 @@ namespace Isen.DotNet.Library.Data
         public DbSet<Commune> CommuneCollection { get; set; }
         public DbSet<Categorie> CategorieCollection { get; set; }
 
+        public DbSet<PointInteret> PointInteretCollection { get; set; }
+
         public ApplicationDbContext(
             DbContextOptions<ApplicationDbContext> options) 
             : base(options) { }
@@ -38,6 +40,9 @@ namespace Isen.DotNet.Library.Data
 
             builder.Entity<Categorie>()
                 .ToTable("Categorie");
+
+            builder.Entity<PointInteret>()
+                .ToTable("PointInteret");
         }
     }
 }

@@ -16,13 +16,16 @@ namespace Isen.DotNet.Library.Data
         private readonly ICommuneRepository _communeRepository;
         private readonly ICategorieRepository _categorieRepository;
 
+        private readonly IPointInteretRepository _pointInteretRepository;
+
         public SeedData(
             ApplicationDbContext context,
             ILogger<SeedData> logger,
             ICityRepository cityRepository,
             IPersonRepository personRepository,
             ICommuneRepository communeRepository,
-            ICategorieRepository categorieRepository)
+            ICategorieRepository categorieRepository,
+            IPointInteretRepository pointInteretRepository)
         {
             _context = context;
             _logger = logger;
@@ -30,6 +33,7 @@ namespace Isen.DotNet.Library.Data
             _personRepository = personRepository;
             _communeRepository = communeRepository;
             _categorieRepository = categorieRepository;
+            _pointInteretRepository = pointInteretRepository;
         }
 
         public void DropDatabase()
@@ -77,6 +81,26 @@ namespace Isen.DotNet.Library.Data
             _communeRepository.Save();
 
             _logger.LogWarning("Added communes");
+        }
+
+        public void AddPointInterets(){
+            if (_pointInteretRepository.GetAll().Any()) return;
+            _logger.LogWarning("Adding point interet");
+
+            var pointInterets = new List<PointInteret>
+            {
+                new PointInteret {
+                    Name = "Toulon"              
+                 },
+                new PointInteret { Name = "Marseille" },
+                new PointInteret { Name = "Nice" },
+                new PointInteret { Name = "Paris" },
+                new PointInteret { Name = "Epinal" }
+            };
+            _pointInteretRepository.UpdateRange(pointInterets);
+            _pointInteretRepository.Save();
+
+            _logger.LogWarning("Added point interets");
         }
     }
 }
