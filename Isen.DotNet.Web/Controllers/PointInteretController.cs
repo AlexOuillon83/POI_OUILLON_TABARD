@@ -9,14 +9,14 @@ using Isen.DotNet.Library.Repositories.Interfaces;
 using Isen.DotNet.Library.Repositories.InMemory;
 using Isen.DotNet.Library.Models.Implementation;
 using Microsoft.Extensions.Logging;
-//à modifier
+
 namespace Isen.DotNet.Web.Controllers
 {
-    public class PitController : BaseController<City>
+    public class PointInteretController : BaseController<PointInteret>
     {
-        public PitController(
-            ILogger<CityController> logger,
-            ICityRepository repository) 
+        public PointInteretController(
+            ILogger<PointInteretController> logger,
+            IPointInteretRepository repository) 
             : base(logger, repository)
         {
         }
