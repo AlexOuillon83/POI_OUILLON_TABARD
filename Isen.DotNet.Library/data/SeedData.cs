@@ -26,7 +26,8 @@ namespace Isen.DotNet.Library.Data
             IPersonRepository personRepository,
             ICommuneRepository communeRepository,
             ICategorieRepository categorieRepository,
-            IPointInteretRepository pointInteretRepository)
+            IPointInteretRepository pointInteretRepository,
+            IAdresseRepository adresseRepository)
         {
             _context = context;
             _logger = logger;
@@ -35,6 +36,7 @@ namespace Isen.DotNet.Library.Data
             _communeRepository = communeRepository;
             _categorieRepository = categorieRepository;
             _pointInteretRepository = pointInteretRepository;
+            _adresseRepository = adresseRepository;
         }
 
         public void DropDatabase()
