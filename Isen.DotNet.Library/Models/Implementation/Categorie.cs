@@ -5,29 +5,13 @@ namespace Isen.DotNet.Library.Models.Implementation
 {
     public class Categorie: BaseModel
     {
-        public string nomCategorie { get; set; }
-        public string descriptifCategorie { get; set;}
-
-        private string _nomCategorie;
-        private string _descriptifCategorie;
-
-        public override string Name
-        {
-            get { return _nomCategorie; }
-            set { _nomCategorie = value; }
-        }
-
-         public override string Descriptif
-        {
-            get { return _descriptifCategorie; }
-            set { _descriptifCategorie = value; }
-        }
+        public string Nom { get; set; }
+        public string Description { get; set;}
 
         public override dynamic ToDynamic()
         {
             var response = base.ToDynamic();
-            response.nom = nomCategorie;
-            response.descriptifCategorie = descriptifCategorie;
+            response.nom = Nom;
             return response;
         }
     }

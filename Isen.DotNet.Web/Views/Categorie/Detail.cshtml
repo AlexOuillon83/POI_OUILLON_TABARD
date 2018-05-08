@@ -1,0 +1,28 @@
+@using Isen.DotNet.Library.Models.Implementation;
+@{
+    ViewData["Title"] = "Categorie (détail)";
+}
+@model Categorie
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Home <small>/categorie/detail</small></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-horizontal" asp-action="Detail">
+            <input type="hidden" value="@Model?.Id" asp-for="Id" />
+            <div>
+                <label for="Nom" class="control-label">Nom de la catégorie :</label>
+                <input type="text" class="form-control"
+                    id="Nom" placeholder="Nom de la catégorie"
+                    value="@Model?.Nom" asp-for="Nom" />
+            </div>
+            <br />
+            <input type="submit" class="btn btn-primary" value="Valider" />
+            <a class="btn btn-default" 
+                asp-controller="Categorie" asp-action="Index">Annuler</a>
+        </form>
+    </div>
+</div>

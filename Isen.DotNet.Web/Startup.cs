@@ -48,7 +48,9 @@ namespace Isen.DotNet.Web
 
             // Injection des repo
             services.AddScoped<ICityRepository, DbContextCityRepository>();
+            services.AddScoped<ICommuneRepository, DbContextCommuneRepository>();
             services.AddScoped<IPersonRepository, DbContextPersonRepository>();
+            services.AddScoped<ICategorieRepository, DbContextCategorieRepository>();
 
             // injection d'autres services
             services.AddScoped<SeedData>();
