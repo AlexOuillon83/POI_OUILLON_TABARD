@@ -8,16 +8,11 @@ using Isen.DotNet.Library.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace Isen.DotNet.Library.Repositories.DbContext
-{
-    public class DbContextCommuneRepository :
-        BaseDbContextRepository<Commune>, ICommuneRepository
-    {
-        public DbContextCommuneRepository(
-            ILogger<DbContextCommuneRepository> logger,
-            ApplicationDbContext context)
-            : base(logger, context)
-        {
+namespace Isen.DotNet.Library.Repositories.DbContext {
+    public class DbContextCommuneRepository:
+        BaseDbContextRepository<Commune>, ICommuneRepository {
+            public DbContextCommuneRepository (
+                ILogger<DbContextCommuneRepository> logger,
+                ApplicationDbContext context) : base (logger, context) { }
         }
-    }
 }

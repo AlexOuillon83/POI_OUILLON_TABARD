@@ -26,9 +26,8 @@ namespace Isen.DotNet.Web
                     .GetService<SeedData>();
                 seed.DropDatabase();
                 seed.CreateDatabase();
-                //seed.AddCities();
-                //seed.AddPersons();
                 seed.AddCommunes();
+                seed.AddAdresses();
                 seed.AddCategories();
                 seed.AddPointInterets();
             }

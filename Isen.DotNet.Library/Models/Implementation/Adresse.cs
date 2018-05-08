@@ -10,14 +10,16 @@ namespace Isen.DotNet.Library.Models.Implementation
         public string Texte { get; set;}
         public double ZipCode { get; set; }
 
-        public Commune commune { get; set;}
-        public List<Person> PersonCollection { get;set; }
-        public int? PersonCount => PersonCollection?.Count;
+        public Commune Commune { get; set; }
+
+        public float Longitude {get; set; }
+
+        public float Latitude {get; set; }
 
         public override dynamic ToDynamic()
         {
             var response = base.ToDynamic();
-            response.nb = PersonCount;
+            response.commune = Commune;
             return response;
         }
     }
