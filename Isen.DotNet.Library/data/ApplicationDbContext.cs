@@ -10,6 +10,7 @@ namespace Isen.DotNet.Library.Data
         public DbSet<Person> PersonCollection { get;set; }
         public DbSet<Commune> CommuneCollection { get; set; }
         public DbSet<Categorie> CategorieCollection { get; set; }
+        public DbSet<Adresse> AdresseCollection { get; set; }
 
         public ApplicationDbContext(
             DbContextOptions<ApplicationDbContext> options) 
@@ -38,6 +39,10 @@ namespace Isen.DotNet.Library.Data
 
             builder.Entity<Categorie>()
                 .ToTable("Categorie");
+
+            builder.Entity<Adresse>()
+                .ToTable("Adresse")
+                .HasOne(p => p.Commune);
         }
     }
 }
