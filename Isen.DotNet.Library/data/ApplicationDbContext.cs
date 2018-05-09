@@ -44,6 +44,13 @@ namespace Isen.DotNet.Library.Data
 
             builder.Entity<PointInteret>()
                 .ToTable("PointInteret");
+<<<<<<< HEAD
+=======
+                
+            builder.Entity<Adresse>()
+                .ToTable("Adresse")
+                .HasOne(p => p.Commune);
+>>>>>>> 96d806858af33bf993f99313919eaf6f0b37fd13
         }
     }
 }

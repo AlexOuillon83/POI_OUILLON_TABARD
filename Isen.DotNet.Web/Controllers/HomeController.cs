@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Isen.DotNet.Web.Models;
+using FormsTagHelper.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Isen.DotNet.Web.Controllers
 {
@@ -12,6 +14,7 @@ namespace Isen.DotNet.Web.Controllers
     {
         public IActionResult Index()
         {
+            List<SelectListItem> communes = CommuneViewModel.Communes();
             return View();
         }
 
