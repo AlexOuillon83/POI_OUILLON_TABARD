@@ -14,7 +14,6 @@ namespace Isen.DotNet.Web.Controllers
     {
         public IActionResult Index()
         {
-            List<SelectListItem> communes = CommuneViewModel.Communes();
             return View();
         }
 

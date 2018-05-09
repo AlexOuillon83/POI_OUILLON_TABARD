@@ -8,13 +8,17 @@ namespace Isen.DotNet.Library.Models.Implementation
     { 
 
         public string Texte { get; set;}
-        public double ZipCode { get; set; }
+        public string ZipCode { get; set; }
 
         public Commune Commune { get; set; }
 
         public float Longitude {get; set; }
 
         public float Latitude {get; set; }
+
+        public override string ToString(){
+            return String.Format("Texte: {0}, {1} {2} - ({3},{4})", Texte, ZipCode, Commune?.Nom, Longitude, Latitude);
+        }
 
         public override dynamic ToDynamic()
         {

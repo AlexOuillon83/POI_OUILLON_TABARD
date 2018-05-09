@@ -11,7 +11,6 @@ namespace Isen.DotNet.Library.Data
         public DbSet<Commune> CommuneCollection { get; set; }
         public DbSet<Categorie> CategorieCollection { get; set; }
         public DbSet<Adresse> AdresseCollection { get; set; }
-
         public DbSet<PointInteret> PointInteretCollection { get; set; }
 
         public ApplicationDbContext(
@@ -44,7 +43,7 @@ namespace Isen.DotNet.Library.Data
 
             builder.Entity<PointInteret>()
                 .ToTable("PointInteret");
-                
+
             builder.Entity<Adresse>()
                 .ToTable("Adresse")
                 .HasOne(p => p.Commune);
