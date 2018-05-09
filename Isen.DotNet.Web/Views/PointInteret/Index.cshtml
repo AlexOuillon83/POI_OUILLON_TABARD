@@ -21,7 +21,6 @@
                 <th>Nom</th>
                 <th>Descriptif</th>
                 <th>Categorie</th>
-                <th>Adresse</th>
             </tr>
         </thead>
         <tbody>
@@ -31,11 +30,7 @@
                 <td>@poi.Id</td>
                 <td>@poi.Nom</td>
                 <td>@poi.Descriptif</td>
-                <td>@poi.Categorie?.Nom @poi.Categorie?.Description</td> 
-                <td>@poi.Adresse?.ZipCode </td>
-
-
-                <td></td>
+                <td>@poi.Categorie?.Nom</td> 
                 <td>
                     <a class="btn btn-default" asp-controller="PointInteret" asp-action="Detail" asp-route-id="@poi.Id">Editer</a>
                     &nbsp;

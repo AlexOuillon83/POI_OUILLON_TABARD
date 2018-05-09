@@ -74,8 +74,8 @@ namespace Isen.DotNet.Library.Data
 
             var adresses = new List<Adresse>
             {
-                new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
-                new Adresse { Nom = "7 Rue Vernier, 06000 Nice" },
+                new Adresse { Texte = "14 Rue Chevalier Paul", ZipCode = "83000", Longitude = 145, Latitude = 333 },
+                new Adresse { Texte = "19 Bd Mazarin Paul", ZipCode = "75800", Longitude = 853, Latitude = 978 }
             };
             _adresseRepository.UpdateRange(adresses);
             _adresseRepository.Save();
@@ -108,16 +108,10 @@ namespace Isen.DotNet.Library.Data
             var pointInterets = new List<PointInteret>
             {
                 new PointInteret { 
-                    Name = "Toulon", 
-                    Descriptif = "Descriptif 1", 
-                    Adresse = new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
-                    Categorie = new Categorie { Nom = "Categorie Restauration", Description = "Description de la catégorie" },
+                    Name = "Toulon"
                     },
                 new PointInteret { 
-                    Name = "Marseille", 
-                    Descriptif = "Descriptif 2", 
-                    Adresse = new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
-                    Categorie = new Categorie { Nom = "Categorie Restauration" , Description = "Description de la catégorie"},
+                    Name = "Marseille"
                     }
             };
             _pointInteretRepository.UpdateRange(pointInterets);

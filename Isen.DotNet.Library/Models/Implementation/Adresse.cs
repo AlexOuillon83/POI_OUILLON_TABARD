@@ -6,14 +6,9 @@ namespace Isen.DotNet.Library.Models.Implementation
 {
     public class Adresse : BaseModel
     { 
-<<<<<<< HEAD
-        public string Nom { get; set;}
-        public double ZipCode { get; set; }
-=======
 
         public string Texte { get; set;}
         public string ZipCode { get; set; }
->>>>>>> ece2764a4c1c2c4ea454622df992553bc8347c1a
 
         public Commune Commune { get; set; }
 
@@ -28,7 +23,7 @@ namespace Isen.DotNet.Library.Models.Implementation
         public override dynamic ToDynamic()
         {
             var response = base.ToDynamic();
-            response.nom = Nom;
+            response.nom = Texte;
             response.zipcode = ZipCode;
             response.latitude = Latitude;
             response.longitude = Longitude;

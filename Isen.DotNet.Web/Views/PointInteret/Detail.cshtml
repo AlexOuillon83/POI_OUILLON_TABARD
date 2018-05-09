@@ -1,4 +1,5 @@
 @using Isen.DotNet.Library.Models.Implementation;
+@using Isen.DotNet.Web.Models;
 @{
     ViewData["Title"] = "Poi (détail)";
 }
@@ -14,33 +15,58 @@
         <form class="form-horizontal" asp-action="Detail">
             <input type="hidden" value="@Model?.Id" asp-for="Id" />
             <div>
-                <label for="Name" class="control-label">Nom dun point d'intérêts :</label>
+                <label for="Name" class="control-label">Nom d'un point d'intérêts :</label>
                 <input type="text" class="form-control"
-                    id="Name" placeholder="Nom de la ville"
+                    id="Name" placeholder="Définissez un nom"
                     value="@Model?.Nom" asp-for="Nom" />
             </div>
 
             <div>
-                <label for="Name" class="control-label">Descriptif :</label>
+                <label for="Descriptif" class="control-label">Descriptif :</label>
                 <input type="text" class="form-control"
                     id="Descriptif" placeholder="Descriptif"
                     value="@Model?.Descriptif" asp-for="Descriptif" />
             </div>
 
             <div>
-                <label for="Name" class="control-label">Categorie :</label>
-                <input type="text" class="form-control"
-                    id="Categorie" placeholder="Categorie"
-                    value="@Model?.Categorie?.Nom" asp-for="Categorie" />
+                <label for="Commune" class="control-label">Commune :</label>
+                <select class="form-control"
+                    id="Commune" placeholder="Commune"
+                    value="@Model?.Commune"
+                    name="commune">
+                    @if (ViewBag.Communes != null)
+                    {
+                        @foreach (Commune commune in ViewBag.Communes)
+                        {
+                            <option value="@commune?.Id">@commune.Nom</option>
+                        }
+                    }
+                </select>
             </div>
 
             <div>
-                <label for="Name" class="control-label">Adresse :</label>
-                <input type="text" class="form-control"
-                    id="Adresse" placeholder="Adresse"
-                    value="@Model?.Adresse?.Nom" asp-for="Adresse" />
-            </div>
-            
+                <label for="Categorie" class="control-label">Categorie :</label>
+                
+                <!-- Ne transmets pas la valeur une fois sélectionnée -->
+                <!-- Ne transmets pas la valeur une fois sélectionnée -->
+                <!-- Ne transmets pas la valeur une fois sélectionnée -->
+                <!-- Ne transmets pas la valeur une fois sélectionnée -->
+                <!-- Ne transmets pas la valeur une fois sélectionnée -->
+                
+                <select class="form-control"
+                    id="Commune" placeholder="Categorie"
+                    value="@Model?.Categorie"
+                    name="categorie">
+                    @if (ViewBag.Categories != null)
+                    {
+                        @foreach (Categorie categorie in ViewBag.Categories)
+                        {
+                            <option value="@categorie?.Id">@categorie.Nom</option>
+                        }
+                    }
+                </select>
+            </div>  
+
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />
             <a class="btn btn-default" 
