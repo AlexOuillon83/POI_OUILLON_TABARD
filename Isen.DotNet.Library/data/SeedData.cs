@@ -89,11 +89,11 @@ namespace Isen.DotNet.Library.Data
 
             var communes = new List<Commune>
             {
-                new Commune { Name = "Toulon" },
-                new Commune { Name = "Marseille" },
-                new Commune { Name = "Nice" },
-                new Commune { Name = "Paris" },
-                new Commune { Name = "Epinal" }
+                new Commune { Nom = "Toulon" },
+                new Commune { Nom = "Marseille" },
+                new Commune { Nom = "Nice" },
+                new Commune { Nom = "Paris" },
+                new Commune { Nom = "Nîmes" }
             };
             _communeRepository.UpdateRange(communes);
             _communeRepository.Save();

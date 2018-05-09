@@ -19,7 +19,10 @@
             <tr>
                 <th>#</th>
                 <th>Texte</th>
-                <th></th>
+                <th>Commune</th>
+                <th>Code postal</th>
+                <th>Longitude</th>
+                <th>Latitude</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +31,16 @@
             <tr>
                 <td>@adresse.Id</td>
                 <td>@adresse.Texte</td>
+                @if (adresse.Commune != null)
+                {
+                    <td>@adresse.Commune.Nom</td>
+                } else
+                {
+                    <td>Aucune commune</td>
+                }
+                <td>@adresse.ZipCode</td>
+                <td>@adresse.Longitude</td>
+                <td>@adresse.Latitude</td>
                 <td>
                     <a class="btn btn-default" asp-controller="adresse" asp-action="Detail" asp-route-id="@adresse.Id">Editer</a>
                     &nbsp;

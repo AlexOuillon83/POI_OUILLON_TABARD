@@ -6,14 +6,24 @@ namespace Isen.DotNet.Library.Models.Implementation
 {
     public class Adresse : BaseModel
     { 
+<<<<<<< HEAD
         public string Nom { get; set;}
         public double ZipCode { get; set; }
+=======
+
+        public string Texte { get; set;}
+        public string ZipCode { get; set; }
+>>>>>>> ece2764a4c1c2c4ea454622df992553bc8347c1a
 
         public Commune Commune { get; set; }
 
         public float Longitude {get; set; }
 
         public float Latitude {get; set; }
+
+        public override string ToString(){
+            return String.Format("Texte: {0}, {1} {2} - ({3},{4})", Texte, ZipCode, Commune?.Nom, Longitude, Latitude);
+        }
 
         public override dynamic ToDynamic()
         {

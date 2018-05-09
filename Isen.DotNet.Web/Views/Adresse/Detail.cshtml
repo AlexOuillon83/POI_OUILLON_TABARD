@@ -17,12 +17,32 @@
             <div>
                 <label for="Texte" class="control-label">Adresse :</label>
                 <input type="text" class="form-control"
-                    id="Texte" placeholder="Adresse"
+                    id="Texte" placeholder="@Model?.Texte"
                     value="@Model?.Texte" asp-for="Texte" />
+                <label for="ZipCode" class="control-label">Code postal :</label>
+                <input type="text" class="form-control"
+                    id="ZipCode" placeholder="@Model?.ZipCode"
+                    value="@Model?.ZipCode" asp-for="ZipCode" />
+                <label for="Longitude" class="control-label">Longitude :</label>
+                <input type="number" class="form-control"
+                    id="Longitude" placeholder="@Model?.Longitude"
+                    value="@Model?.Longitude" asp-for="Longitude" />
+                <label for="Latitude" class="control-label">Latitude :</label>
+                <input type="number" class="form-control"
+                    id="Latitude" placeholder="@Model?.Latitude"
+                    value="@Model?.Latitude" asp-for="Latitude" />
                 <label for="Commune" class="control-label">Commune :</label>
-                <select type="text" class="form-control"
+                <select class="form-control"
                     id="Commune" placeholder="Commune"
-                    value="@Model?.Commune" asp-for="Commune" asp-items="CommuneView.Communes">
+                    value="@Model?.Commune"
+                    name="commune">
+                    @if (ViewBag.Communes != null)
+                    {
+                        @foreach (Commune commune in ViewBag.Communes)
+                        {
+                            <option value="@commune?.Id">@commune.Nom</option>
+                        }
+                    }
                 </select>
             </div>
             <br />
