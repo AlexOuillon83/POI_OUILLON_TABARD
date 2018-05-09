@@ -9,9 +9,15 @@ namespace Isen.DotNet.Library.Repositories.InMemory
 {
     public class InMemoryPointInteretRepository : BaseInMemoryRepository<PointInteret>, IPointInteretRepository
     {
+        private IAdresseRepository _adresseRepository;
+        private ICategorieRepository _categorieRepository;
         public InMemoryPointInteretRepository(
-            ILogger<InMemoryPointInteretRepository> logger) : base(logger)
+            ILogger<InMemoryPointInteretRepository> logger,
+            IAdresseRepository adresseRepository,
+            ICategorieRepository categorieRepository) : base(logger)
         {
+                _categorieRepository = categorieRepository;
+                _adresseRepository = adresseRepository;
         }
 
         public override IQueryable<PointInteret> ModelCollection
@@ -22,8 +28,21 @@ namespace Isen.DotNet.Library.Repositories.InMemory
                 {
                     _modelCollection = new List<PointInteret>
                     {
-                        new PointInteret { Id = 1, Name = "Toulon"},
-                        new PointInteret { Id = 2, Name = "Marseille" },
+                        new PointInteret { 
+                            Id = 1, 
+                            Name = "Toulon", 
+                            Descriptif = " Salut à toi jeune padawan",
+                            Adresse = _adresseRepository.Single("83 000 Boulevard Streetzer"),
+                            Categorie = _categorieRepository.Single("Rugby")
+                            },
+                        new PointInteret { 
+                            Id = 2, 
+                            Name = "Marseille",
+                            Descriptif = " Hello à toi aussi fitboy",
+                            Adresse = _adresseRepository.Single("83 000 Boulevard Streetzer"),
+                            Categorie = _categorieRepository.Single("Rugby")
+
+                             },
                         new PointInteret { Id = 3, Name = "Nice" },
                         new PointInteret { Id = 4, Name = "Paris" }
                     };

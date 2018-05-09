@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Isen.DotNet.Library.Models.Implementation;
@@ -74,8 +74,8 @@ namespace Isen.DotNet.Library.Data
 
             var adresses = new List<Adresse>
             {
-                new Adresse { Texte = "14 Rue Chevalier Paul, 83000 Toulon" },
-                new Adresse { Texte = "7 Rue Vernier, 06000 Nice" },
+                new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
+                new Adresse { Nom = "7 Rue Vernier, 06000 Nice" },
             };
             _adresseRepository.UpdateRange(adresses);
             _adresseRepository.Save();
@@ -107,13 +107,18 @@ namespace Isen.DotNet.Library.Data
 
             var pointInterets = new List<PointInteret>
             {
-                new PointInteret {
-                    Name = "Toulon"              
-                 },
-                new PointInteret { Name = "Marseille" },
-                new PointInteret { Name = "Nice" },
-                new PointInteret { Name = "Paris" },
-                new PointInteret { Name = "Epinal" }
+                new PointInteret { 
+                    Name = "Toulon", 
+                    Descriptif = "Descriptif 1", 
+                    Adresse = new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
+                    Categorie = new Categorie { Nom = "Categorie Restauration", Description = "Description de la catégorie" },
+                    },
+                new PointInteret { 
+                    Name = "Marseille", 
+                    Descriptif = "Descriptif 2", 
+                    Adresse = new Adresse { Nom = "14 Rue Chevalier Paul", ZipCode = 83000, Longitude = 145, Latitude = 333 },
+                    Categorie = new Categorie { Nom = "Categorie Restauration" , Description = "Description de la catégorie"},
+                    }
             };
             _pointInteretRepository.UpdateRange(pointInterets);
             _pointInteretRepository.Save();

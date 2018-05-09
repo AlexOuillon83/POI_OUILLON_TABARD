@@ -14,6 +14,9 @@ namespace Isen.DotNet.Library.Models.Implementation
         public override dynamic ToDynamic()
         {
             var response = base.ToDynamic();
+            response.nom = Nom;
+            response.longitude = Longitude;
+            response.latitude = Latitude;
             return response;
         }
     }

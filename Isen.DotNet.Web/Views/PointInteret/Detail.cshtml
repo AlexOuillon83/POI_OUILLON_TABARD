@@ -23,7 +23,7 @@
             <div>
                 <label for="Name" class="control-label">Descriptif :</label>
                 <input type="text" class="form-control"
-                    id="Categorie" placeholder="Descriptif"
+                    id="Descriptif" placeholder="Descriptif"
                     value="@Model?.Descriptif" asp-for="Descriptif" />
             </div>
 
@@ -31,20 +31,20 @@
                 <label for="Name" class="control-label">Categorie :</label>
                 <input type="text" class="form-control"
                     id="Categorie" placeholder="Categorie"
-                    value="@Model?.Categorie" asp-for="Categorie" />
+                    value="@Model?.Categorie?.Nom" asp-for="Categorie" />
             </div>
 
             <div>
                 <label for="Name" class="control-label">Adresse :</label>
                 <input type="text" class="form-control"
-                    id="Categorie" placeholder="Adresse"
-                    value="@Model?.Adresse" asp-for="Adresse" />
+                    id="Adresse" placeholder="Adresse"
+                    value="@Model?.Adresse?.Nom" asp-for="Adresse" />
             </div>
             
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />
             <a class="btn btn-default" 
-                asp-controller="Poi" asp-action="Index">Annuler</a>
+                asp-controller="PointInteret" asp-action="Index">Annuler</a>
         </form>
     </div>
 </div>

@@ -13,7 +13,8 @@ namespace Isen.DotNet.ConsoleApp
             ICityRepository cityRepository = 
                 new InMemoryCityRepository();
             IPersonRepository personRepository = 
-                new InMemoryPersonRepository(cityRepository);    
+                new InMemoryPersonRepository(cityRepository);  
+                  
             // Etat initial des villes
             foreach(var c in cityRepository.GetAll()) Console.WriteLine(c);
             Console.WriteLine("- - - - - - - -");

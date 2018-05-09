@@ -12,6 +12,7 @@ namespace Isen.DotNet.Library.Models.Implementation
         {
             var response = base.ToDynamic();
             response.nom = Nom;
+            response.description = Description;
             return response;
         }
     }

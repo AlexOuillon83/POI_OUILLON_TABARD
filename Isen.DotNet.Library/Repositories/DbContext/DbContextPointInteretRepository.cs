@@ -15,8 +15,8 @@ namespace Isen.DotNet.Library.Repositories.DbContext {
                 ILogger<DbContextPointInteretRepository> logger,
                 ApplicationDbContext context) : base (logger, context) { }
 
-            //public override IQueryable<City> Includes(
-            //  IQueryable<PointInteret> queryable)
-            //    => queryable.Include(c => c.Nom);
-        }
+            public override IQueryable<PointInteret> Includes(
+              IQueryable<PointInteret> queryable)
+                => queryable.Include(c => c.Categorie);
+            }
 }

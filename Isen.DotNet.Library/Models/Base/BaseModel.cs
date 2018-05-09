@@ -7,7 +7,6 @@ namespace Isen.DotNet.Library.Models.Base
     {
         public int Id { get;set; }
         public virtual string Name { get;set; }
-        public virtual string Descriptif { get; set;}
 
         public virtual string Display =>
             $"[Id={Id}]|{Name}";

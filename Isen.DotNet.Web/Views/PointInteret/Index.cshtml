@@ -19,10 +19,9 @@
             <tr>
                 <th>#</th>
                 <th>Nom</th>
-                <th>Categorie</th>
                 <th>Descriptif</th>
+                <th>Categorie</th>
                 <th>Adresse</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -32,8 +31,9 @@
                 <td>@poi.Id</td>
                 <td>@poi.Nom</td>
                 <td>@poi.Descriptif</td>
-                <td>@poi.Categorie</td>
-                <td>@poi.Adresse</td>
+                <td>@poi.Categorie?.Nom @poi.Categorie?.Description</td> 
+                <td>@poi.Adresse?.ZipCode </td>
+
 
                 <td></td>
                 <td>

@@ -19,6 +19,7 @@ namespace Isen.DotNet.Web.Controllers
             IPointInteretRepository repository) 
             : base(logger, repository)
         {
+            
         }
     }
 }

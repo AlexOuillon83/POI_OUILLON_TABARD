@@ -22,9 +22,9 @@ namespace Isen.DotNet.Library.Repositories.InMemory
                 {
                     _modelCollection = new List<Adresse>
                     {
-                        new Adresse { Id = 1, Texte = "83000, Toulon" },
-                        new Adresse { Id = 2, Texte = "06000, Marseille" },
-                        new Adresse { Id = 3, Texte = "06100, Nice" },
+                        new Adresse { Id = 1, Nom = "83000, Toulon" },
+                        new Adresse { Id = 2, Nom = "06000, Marseille" },
+                        new Adresse { Id = 3, Nom = "06100, Nice" },
                     };
                 }
                 return _modelCollection.AsQueryable();
