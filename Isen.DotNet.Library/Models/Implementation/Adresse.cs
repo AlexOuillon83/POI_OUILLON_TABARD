@@ -16,6 +16,8 @@ namespace Isen.DotNet.Library.Models.Implementation
 
         public float Latitude {get; set; }
 
+
+        //Variable Texte ne retourne rien 
         public override string ToString(){
             return String.Format("Texte: {0}, {1} {2} - ({3},{4})", Texte, ZipCode, Commune?.Nom, Longitude, Latitude);
         }
@@ -24,6 +26,7 @@ namespace Isen.DotNet.Library.Models.Implementation
         {
             var response = base.ToDynamic();
             response.texte = Texte;
+            response.name = Name;
             response.zipcode = ZipCode;
             response.latitude = Latitude;
             response.longitude = Longitude;
