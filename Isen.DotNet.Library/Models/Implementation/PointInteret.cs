@@ -10,7 +10,6 @@ namespace Isen.DotNet.Library.Models.Implementation {
         public string _nom;
         public string _descriptif;
         public Categorie  _categorie;
-        public Adresse _adresse;
 
         public Commune Commune { get; set; }
 
@@ -25,7 +24,7 @@ namespace Isen.DotNet.Library.Models.Implementation {
         }
 
         public override string ToString(){
-            return String.Format("Texte: {0}, {1} {2} ", this.Nom, this.Descriptif, this.Categorie?.Nom);
+            return String.Format("Texte: {0}, {1} {2} {3}", this.Nom, this.Descriptif, this.Categorie?.Nom, this.Adresse?.Texte);
         }
 
       

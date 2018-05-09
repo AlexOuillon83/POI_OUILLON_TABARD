@@ -7,12 +7,12 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h1>Home <small>/city/detail</small></h1>
+        <h1>Home <small>/poi/detail</small></h1>
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
-        <form class="form-horizontal" asp-action="Detail">
+        <form class="form-horizontal" asp-action="Ajout">
             <input type="hidden" value="@Model?.Id" asp-for="Id" />
             <div>
                 <label for="Name" class="control-label">Nom d'un point d'intérêts :</label>
@@ -27,36 +27,16 @@
                     id="Descriptif" placeholder="Descriptif"
                     value="@Model?.Descriptif" asp-for="Descriptif" />
             </div>
-
             <div>
-                <label for="Commune" class="control-label">Commune :</label>
-                <select class="form-control"
-                    id="Commune" placeholder="Commune"
-                    value="@Model?.Commune"
-                    name="commune">
-                    @if (ViewBag.Communes != null)
-                    {
-                        @foreach (Commune commune in ViewBag.Communes)
-                        {
-                            <option value="@commune?.Id">@commune.Nom</option>
-                        }
-                    }
-                </select>
+                @await Component.InvokeAsync("AdresseForm", new { adresse = @Model?.Adresse, communes = ViewBag.Communes })
             </div>
-
             <div>
                 <label for="Categorie" class="control-label">Categorie :</label>
-                
-                <!-- Ne transmets pas la valeur une fois sélectionnée -->
-                <!-- Ne transmets pas la valeur une fois sélectionnée -->
-                <!-- Ne transmets pas la valeur une fois sélectionnée -->
-                <!-- Ne transmets pas la valeur une fois sélectionnée -->
-                <!-- Ne transmets pas la valeur une fois sélectionnée -->
-                
+
                 <select class="form-control"
-                    id="Commune" placeholder="Categorie"
+                    id="Categorie" placeholder="Categorie"
                     value="@Model?.Categorie"
-                    name="categorie">
+                    name="Categorie">
                     @if (ViewBag.Categories != null)
                     {
                         @foreach (Categorie categorie in ViewBag.Categories)

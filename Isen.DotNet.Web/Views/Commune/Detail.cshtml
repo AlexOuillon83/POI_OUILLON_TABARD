@@ -18,6 +18,14 @@
                 <input type="text" class="form-control"
                     id="Name" placeholder="Nom de la commune"
                     value="@Model?.Name" asp-for="Name" />
+                <label for="Longitude" class="control-label">Longitude :</label>
+                <input type="number" class="form-control"
+                    id="Longitude" placeholder="@Model?.Longitude"
+                    value="@Model?.Longitude" asp-for="Longitude" />
+                <label for="Latitude" class="control-label">Latitude :</label>
+                <input type="number" class="form-control"
+                    id="Latitude" placeholder="@Model?.Latitude"
+                    value="@Model?.Latitude" asp-for="Latitude" />
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />

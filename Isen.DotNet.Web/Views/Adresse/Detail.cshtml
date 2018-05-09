@@ -1,7 +1,7 @@
 @using Isen.DotNet.Library.Models.Implementation;
 @using Isen.DotNet.Web.Models;
 @{
-    ViewData["Title"] = "Adresse (détail)";
+    ViewData["title"] = "Adresse";
 }
 @model Adresse
 
@@ -12,38 +12,9 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <form class="form-horizontal" asp-action="Detail">
-            <input type="hidden" value="@Model?.Id" asp-for="Id" />
+        <form class="form-horizontal" asp-action="Ajout">
             <div>
-                <label for="Texte" class="control-label">Adresse :</label>
-                <input type="text" class="form-control"
-                    id="Texte" placeholder="@Model?.Texte"
-                    value="@Model?.Texte" asp-for="Texte" />
-                <label for="ZipCode" class="control-label">Code postal :</label>
-                <input type="text" class="form-control"
-                    id="ZipCode" placeholder="@Model?.ZipCode"
-                    value="@Model?.ZipCode" asp-for="ZipCode" />
-                <label for="Longitude" class="control-label">Longitude :</label>
-                <input type="number" class="form-control"
-                    id="Longitude" placeholder="@Model?.Longitude"
-                    value="@Model?.Longitude" asp-for="Longitude" />
-                <label for="Latitude" class="control-label">Latitude :</label>
-                <input type="number" class="form-control"
-                    id="Latitude" placeholder="@Model?.Latitude"
-                    value="@Model?.Latitude" asp-for="Latitude" />
-                <label for="Commune" class="control-label">Commune :</label>
-                <select class="form-control"
-                    id="Commune" placeholder="Commune"
-                    value="@Model?.Commune"
-                    name="commune">
-                    @if (ViewBag.Communes != null)
-                    {
-                        @foreach (Commune commune in ViewBag.Communes)
-                        {
-                            <option value="@commune?.Id">@commune.Nom</option>
-                        }
-                    }
-                </select>
+                @await Component.InvokeAsync("AdresseForm", new { adresse = @Model, communes = ViewBag.Communes })
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />

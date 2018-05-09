@@ -30,39 +30,36 @@ namespace Isen.DotNet.Web.Controllers
         [HttpPost]
         public override IActionResult Detail(Adresse model)
         {
-            _logger.LogWarning("Controller de soumission");
-            _logger.LogWarning(model.ToString());
-            // J'arrive pas à retrouver au moins la valeur de Commune envoyée par le formulaire
-            // il manque juste ça pour, et on a gagné
-            //_logger.LogWarning(String.Format("Commune: {0}", model.Commune.Nom));
-
             _repository.Update(model);
             _repository.Save();
             return RedirectToAction("Index");
         }
-
+        
         /* 
+        * Controller d'ajout et d'édition de l'adresse
+        */
         [HttpPost]
-        public IActionResult Detail(string Texte, string ZipCode, float Longitude, float Latitude, int Commune)
+        public IActionResult Ajout(int Id, string Texte, string ZipCode, float Longitude, float Latitude, int Commune)
         {
-            _logger.LogWarning("Controller de soumission avec commune");
-            _logger.LogWarning(String.Format("Commune: {0}", Commune));
-
-            Adresse model = new Adresse();
+            // Création d'une nouvelle adresse si elle n'existe pas
+            Adresse model = _repository.Single(Id);
+            if (model == null) model = new Adresse();
             
+            // Hydratation des champs de l'adresse
+            model.Texte = Texte;
             model.ZipCode = ZipCode;
             model.Longitude = Longitude;
             model.Latitude = Latitude;
             Commune commune = _communeRepo.Single(Commune);
             model.Commune = commune;
 
+            // Affichage de l'adresse à ajouter
             _logger.LogWarning(model.ToString());
 
             _repository.Update(model);
             _repository.Save();
             return RedirectToAction("Index");
         }
-        */
 
         public override IActionResult Detail(int? id){
             // Récupération de la liste des communes
@@ -73,7 +70,7 @@ namespace Isen.DotNet.Web.Controllers
             if (id == null){
                 return View();
             }
-            // Récupérer la ville et la passer à la vue
+            // Récupére l'adresse et la passer à la vue
             var model = _repository.Single(id.Value);
             return View(model);
         }

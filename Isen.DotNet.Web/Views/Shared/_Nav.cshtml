@@ -19,21 +19,6 @@
                         role="button"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        Villes
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-controller="City" asp-action="Index">Toutes...</a></li>
-                        <li><a asp-controller="City" asp-action="Detail">Ajouter...</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" 
-                        class="dropdown-toggle"
-                        data-toggle="dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false">
                         Categories
                         <span class="caret"></span>
                     </a>
@@ -72,22 +57,6 @@
                         <li><a asp-controller="Commune" asp-action="Detail">Ajouter...</a></li>
                     </ul>
                 </li>
-                <li class="dropdown">
-                    <a href="#" 
-                        class="dropdown-toggle"
-                        data-toggle="dropdown"
-                        role="button"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                        Personnes
-                        <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a asp-controller="Person" asp-action="Index">Toutes...</a></li>
-                        <li><a asp-controller="Person" asp-action="Detail">Ajouter...</a></li>
-                    </ul>
-                </li>
-
                  <li class="dropdown">
                     <a href="#" 
                         class="dropdown-toggle"
@@ -95,16 +64,14 @@
                         role="button"
                         aria-haspopup="true"
                         aria-expanded="false">
-                        PointInteret
+                        Points d'intérêt
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a asp-controller="PointInteret" asp-action="Index">Toutes...</a></li>
+                        <li><a asp-controller="PointInteret" asp-action="Index">Tous...</a></li>
                         <li><a asp-controller="PointInteret" asp-action="Detail">Ajouter...</a></li>
                     </ul>
                 </li>
-                <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
             </ul>
         </div>
     </div>

@@ -23,7 +23,7 @@ namespace Isen.DotNet.Library.Models.Implementation
         public override dynamic ToDynamic()
         {
             var response = base.ToDynamic();
-            response.nom = Texte;
+            response.texte = Texte;
             response.zipcode = ZipCode;
             response.latitude = Latitude;
             response.longitude = Longitude;

@@ -17,17 +17,57 @@ namespace Isen.DotNet.Web.Controllers
     {
         private readonly ICategorieRepository _categorieRepo; 
         private readonly ICommuneRepository _communeRepo;
+        private IAdresseRepository _adresseRepo;
 
         public PointInteretController(
             ILogger<PointInteretController> logger,
             IPointInteretRepository repository,
             ICategorieRepository categorieRepo,
-            ICommuneRepository communeRepo)
+            ICommuneRepository communeRepo,
+            IAdresseRepository adresseRepo)
 
             : base(logger, repository)
         {
             _categorieRepo = categorieRepo;
             _communeRepo = communeRepo;
+            _adresseRepo = adresseRepo;
+        }
+
+        /* 
+        * Controller d'ajout et d'édition de l'adresse
+        */
+        [HttpPost]
+        public IActionResult Ajout(int Id, string Descriptif, string Texte, string ZipCode, float Longitude, float Latitude, int Commune, int Categorie)
+        {
+            // Création du poi s'il n'existe pas
+            PointInteret model = _repository.Single(Id);
+            if (model == null) model = new PointInteret();
+
+            Adresse adresse = new Adresse();
+
+            // Hydratation des champs de l'adresse
+            adresse.Texte = Texte;
+            adresse.ZipCode = ZipCode;
+            adresse.Longitude = Longitude;
+            adresse.Latitude = Latitude;
+            Commune commune = _communeRepo.Single(Commune);
+            adresse.Commune = commune;
+            _adresseRepo.Update(adresse);
+            _adresseRepo.Save();
+
+            Categorie categorie = _categorieRepo.Single(Categorie);
+
+            // Hydratation des champs du poi
+            model.Descriptif = Descriptif;
+            model.Categorie = categorie;
+            model.Adresse = adresse;
+
+            // Affichage du poi à ajouter
+            _logger.LogWarning(model.ToString());
+
+            _repository.Update(model);
+            _repository.Save();
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
