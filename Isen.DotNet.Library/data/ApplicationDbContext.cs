@@ -44,7 +44,11 @@ namespace Isen.DotNet.Library.Data
             builder.Entity<PointInteret>()
                 .ToTable("PointInteret")
                 .HasOne(c => c.Categorie);
-                
+
+            builder.Entity<PointInteret>()
+                .ToTable("PointInteret")
+                .HasOne(c => c.Adresse);
+
             builder.Entity<Adresse>()
                 .ToTable("Adresse")
                 .HasOne(p => p.Commune);
