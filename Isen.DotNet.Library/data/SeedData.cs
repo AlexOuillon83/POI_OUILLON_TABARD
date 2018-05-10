@@ -119,5 +119,14 @@ namespace Isen.DotNet.Library.Data
 
             _logger.LogWarning("Added point interets");
         }
+
+        public void getListeDepartement(){
+            //Département est une classe qui s'avère être une liste de commune ayant le même début de code postal
+            //A créer
+        }
+
+        public void getListeCommunesPACA(){
+            //Liste de commune de la région
+        }
     }
 }

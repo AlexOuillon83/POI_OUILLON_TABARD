@@ -25,11 +25,12 @@
             </tr>
         </thead>
         <tbody>
+            
             @foreach(var poi in Model)
             {
             <tr>
                 <td>@poi.Id</td>
-                <td>@poi.Nom</td>
+                <td>@poi.Name</td>
                 <td>@poi.Descriptif</td>
                 <td>@poi.Adresse?.Texte</td>
                 <td>@poi.Categorie?.Nom</td> 
