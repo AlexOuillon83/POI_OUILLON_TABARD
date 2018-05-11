@@ -19,6 +19,7 @@ namespace Isen.DotNet.Library.Repositories.DbContext {
               IQueryable<PointInteret> queryable)
                 => queryable.Include(a => a.Adresse)
                             .Include(a => a.Categorie)
-                            .Include(a => a.Adresse.Commune);
+                            .Include(a => a.Adresse.Commune)
+                            .Include(a => a.Adresse.Commune.Departement);
             }
 }

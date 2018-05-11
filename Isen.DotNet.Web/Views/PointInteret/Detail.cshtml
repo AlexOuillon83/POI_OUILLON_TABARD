@@ -1,7 +1,7 @@
 @using Isen.DotNet.Library.Models.Implementation;
 @using Isen.DotNet.Web.Models;
 @{
-    ViewData["Title"] = "Poi (détail)";
+    ViewData["Title"] = "PointInteret (détail)";
 }
 @model PointInteret
 
@@ -15,10 +15,10 @@
         <form class="form-horizontal" asp-action="Ajout">
             <input type="hidden" value="@Model?.Id" asp-for="Id" />
             <div>
-                <label for="Name" class="control-label">Nom d'un point d'intérêts :</label>
+                <label for="Nom" class="control-label">Nom d'un point d'intérêts :</label>
                 <input type="text" class="form-control"
-                    id="Name" placeholder="Définissez un nom"
-                    value="@Model?.Name" asp-for="Name" />
+                    id="Nom" placeholder="Définissez un nom"
+                    value="@Model?.Nom" asp-for="Nom" />
             </div>
 
             <div>

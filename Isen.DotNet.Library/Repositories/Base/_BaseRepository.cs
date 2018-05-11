@@ -53,7 +53,7 @@ namespace Isen.DotNet.Library.Repositories.Base
         {
             var queryable = ModelCollection;
             queryable = Includes(queryable);
-            return queryable.SingleOrDefault(c => c.Name == name);
+            return queryable.SingleOrDefault(c => c.Nom == name);
         }
         
         // Méthodes de delete

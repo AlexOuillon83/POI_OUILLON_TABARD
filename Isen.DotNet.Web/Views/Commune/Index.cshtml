@@ -21,6 +21,7 @@
                 <th>Nom</th>
                 <th>Longitude</th>
                 <th>Latitude</th>
+                <th>Departement</th>
                 <th></th>
             </tr>
         </thead>
@@ -32,6 +33,7 @@
                 <td>@commune.Nom</td>
                 <td>@commune.Longitude</td>
                 <td>@commune.Latitude</td>
+                <td>@commune.Departement?.Nom</td>
                 <td>
                     <a class="btn btn-default" asp-controller="Commune" asp-action="Detail" asp-route-id="@commune.Id">Editer</a>
                     &nbsp;

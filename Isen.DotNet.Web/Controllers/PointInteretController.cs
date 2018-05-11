@@ -37,7 +37,7 @@ namespace Isen.DotNet.Web.Controllers
         * Controller d'ajout et d'édition de l'adresse
         */
         [HttpPost]
-        public IActionResult Ajout(int Id, string Name, string Descriptif, string Texte, string ZipCode, float Longitude, float Latitude, int Commune, int Categorie)
+        public IActionResult Ajout(int Id, string Nom, string Descriptif, string Texte, string ZipCode, float Longitude, float Latitude, int Commune, int Categorie)
         {
             // Création du poi s'il n'existe pas
             PointInteret model = _repository.Single(Id);
@@ -59,7 +59,7 @@ namespace Isen.DotNet.Web.Controllers
             Categorie categorie = _categorieRepo.Single(Categorie);
 
             // Hydratation des champs du poi
-            model.Name = Name;
+            model.Nom = Nom;
             model.Descriptif = Descriptif;
             model.Categorie = categorie;
             model.Adresse = adresse;

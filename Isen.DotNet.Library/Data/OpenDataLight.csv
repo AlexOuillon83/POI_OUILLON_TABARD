@@ -1,0 +1,67 @@
+EU_circo;code_région;nom_région;chef-lieu_région;numéro_département;nom_département;préfecture;numéro_circonscription;nom_commune;codes_postaux;code_insee;latitude;longitude;éloignement
+Ouest;54;Poitou-Charentes;Poitiers;16;Charente;Angoulême;1;Grassac;16380;16158;45.583333;0.4;1.13
+Ouest;54;Poitou-Charentes;Poitiers;16;Charente;Angoulême;1;Gurat;16320;16162;45.433333;0.266667;1.49
+Ouest;54;Poitou-Charentes;Poitiers;16;Charente;Angoulême;1;Juignac;16190;16170;45.383333;0.166667;1.76
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;1;Toulon;83000;83137;43.116667;5.933333;1.68
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;2;Toulon;83000;83137;43.116667;5.933333;1.68
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;Carqueiranne;83320;83034;43.083333;6.083333;1.87
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;Hyères;83400;83069;43.116667;6.116667;1.68
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;La Crau;83260;83047;43.15;6.066667;1.49
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;La Garde;83130;83062;;;
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;La Londe-les-Maures;83250;83071;43.133333;6.233333;1.58
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;La Valette-du-Var;83160;83144;43.133333;5.983333;1.58
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;Le Pradet;83220;83098;43.1;6.016667;1.78
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;3;Le Revest-les-Eaux;83200;83103;43.366667;6.566667;1.32
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Aiguines;83630;83002;43.766667;6.25;2.08
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Ampus;83111;83003;43.6;6.383333;1.12
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Aups;83630;83007;43.616667;6.233333;1.21
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Baudinard-sur-Verdon;83630;83014;;;
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Bauduen;83630;83015;43.733333;6.183333;1.89
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Bormes-les-Mimosas;83230;83019;43.15;6.333333;1.49
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Cavalaire-sur-Mer;83240;83036;43.166667;6.533333;1.39
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Cogolin;83310;83042;43.25;6.533333;1.19
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Collobrières;83610;83043;43.233333;6.3;1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Draguignan;83300;83050;43.533333;6.466667;1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Flayosc;83780;83058;43.533333;6.4;0.73
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Gassin;83580;83065;43.216667;6.583333;1.38
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Grimaud;83310;83068;43.266667;6.516667;1.13
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;La Croix-Valmer;83420;83048;43.2;6.566667;1.32
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;La Garde-Freinet;83680;83063;43.316667;6.466667;0.93
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;La Môle;83310;83079;43.2;6.466667;1.44
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;La Motte;83920;83085;43.483333;6.516667;1.13
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Le Cannet-des-Maures;83340;83031;43.4;6.35;0.83
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Le Lavandou;83980;83070;43.133333;6.366667;1.58
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Le Luc;83340;83073;43.383333;6.316667;0.35
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Les Arcs;83460;83004;43.45;6.483333;1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Les Mayons;83340;83075;43.316667;6.366667;1.55
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Les Salles-sur-Verdon;83630;83122;43.766667;6.2;2.08
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Le Thoronet;83340;83136;43.45;6.3;0.94
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Lorgues;83510;83072;43.483333;6.366667;0.54
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Plan-de-la-Tour;83120;83094;43.333333;6.55;1.25
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Ramatuelle;83350;83101;43.216667;6.616667;1.51
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Rayol-Canadel-sur-Mer;83820;83152;;;
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Sainte-Maxime;83120;83115;43.3;6.633333;1.58
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Saint-Tropez;83990;83119;43.266667;6.633333;1.58
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Taradeau;83460;83134;43.45;6.433333;1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Trans-en-Provence;83720;83141;43.5;6.483333;1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Vérignon;83630;83147;43.65;6.266667;1.41
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;4;Vidauban;83550;83148;43.416667;6.433333;0.8
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Bagnols-en-Forêt;83600;83008;43.533333;6.7;1.84
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Bargème;83840;83010;43.733333;6.566667;1.89
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Bargemon;83830;83011;43.616667;6.533333;1.21
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Brenon;83840;83022;43.766667;6.55;2.08
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Callas;83830;83028;43.583333;6.533333;1.19
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Callian;83440;83029;43.633333;6.75;2.03
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Châteaudouble;83300;83038;43.583333;6.45;1.02
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Châteauvieux;83840;83040;43.775;6.575;-1
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Claviers;83830;83041;43.6;6.566667;1.32
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Comps-sur-Artuby;83840;83044;43.716667;6.5;1.79
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Fayence;83440;83055;43.616667;6.683333;1.77
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Figanières;83830;83056;43.566667;6.5;1.52
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Fréjus;83600;83061;43,43;6,74; 
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;La Bastide;83840;83013;43.733333;6.616667;1.89
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;La Martre;83840;83074;43.766667;6.6;2.08
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;La Roque-Esclapon;83840;83109;43.716667;6.633333;1.79
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Le Bourguet;83840;83020;43.783333;6.516667;2.18
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Le Muy;83490;83086;43.466667;6.55;1.25
+Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;83;Var;Toulon;5;Les Adrets-de-l'Estérel;83600;83001;;;

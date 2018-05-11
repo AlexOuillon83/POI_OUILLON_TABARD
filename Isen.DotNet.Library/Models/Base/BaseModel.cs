@@ -7,9 +7,10 @@ namespace Isen.DotNet.Library.Models.Base
     {
         public int Id { get;set; }
         public virtual string Name { get;set; }
+        public virtual string Nom { get; set; }
 
         public virtual string Display =>
-            $"[Id={Id}]|{Name}";
+            $"[Id={Id}]|{Nom}";
 
         public override string ToString() => Display; 
 

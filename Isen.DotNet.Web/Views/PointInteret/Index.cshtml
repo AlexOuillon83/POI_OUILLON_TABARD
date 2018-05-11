@@ -32,11 +32,11 @@
                 <tr>
                     <th>#</th>
                     <th>Nom</th>
-                    <th>Descriptif</th>
+                    <th>Description</th>
+                    <th>Adresse</th>
                     <th>Departement</th>
                     <th>Commune</th>
                     <th>Code Postal</th>
-                    <th>Adresse</th>
                     <th>Categorie</th>
                 </tr>
             </thead>
@@ -46,12 +46,20 @@
                 {
                 <tr>
                     <td>@poi.Id</td>
-                    <td>@poi.Name</td>
-                    <td>@poi.Descriptif</td>
-                    <td>@poi.Adresse?.Departement?.Nom </td>
-                    <td>@poi.Adresse?.Commune?.Name</td>
-                    <td>@poi.Adresse?.ZipCode</td>
-                    <td>@poi.Adresse?.Texte</td>
+                    <td>@poi.Nom</td>
+                    <td>@poi.Description</td>
+                    @if(poi.Adresse == null)
+                    {
+                        <td>Aucune adresse</td>
+                        <td>Aucun departement</td>
+                        <td>Aucune commune</td>
+                        <td>Aucun code postal</td>
+                    } else {
+                        <td>@poi.Adresse.Texte </td>
+                        <td>@poi.Adresse.Commune.Departement?.Nom</td>
+                        <td>@poi.Adresse.Commune?.Nom</td>
+                        <td>@poi.Adresse.ZipCode</td>
+                    }
                     <td>@poi.Categorie?.Nom</td> 
                     <td>
                         <a class="btn btn-default" asp-controller="PointInteret" asp-action="Detail" asp-route-id="@poi.Id">Editer</a>
