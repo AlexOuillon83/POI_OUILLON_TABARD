@@ -29,6 +29,7 @@ namespace Isen.DotNet.Web
                 seed.AddCommunes();
                 seed.AddAdresses();
                 seed.AddCategories();
+                seed.AddDepartements();
                 seed.AddPointInterets();
             }
             

@@ -36,7 +36,15 @@ namespace Isen.DotNet.Library.Data
                 .HasForeignKey(p => p.CityId);
 
             builder.Entity<Commune>()
-                .ToTable("Commune");
+                .ToTable("Commune")
+                .HasOne(p => p.Departement)
+                .WithMany(c => c.CommuneCollection)
+                .HasForeignKey(p => p.DepartementId);
+
+            builder.Entity<Departement>()
+                .ToTable("Departement")
+                .HasMany(p => p.CommuneCollection)
+                .WithOne(c => c.Departement);
 
             builder.Entity<Categorie>()
                 .ToTable("Categorie");

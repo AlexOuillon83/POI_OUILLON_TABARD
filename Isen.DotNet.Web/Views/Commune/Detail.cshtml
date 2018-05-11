@@ -14,10 +14,10 @@
         <form class="form-horizontal" asp-action="Detail">
             <input type="hidden" value="@Model?.Id" asp-for="Id" />
             <div>
-                <label for="Name" class="control-label">Nom de la commune :</label>
+                <label for="Nom" class="control-label">Nom de la commune :</label>
                 <input type="text" class="form-control"
-                    id="Name" placeholder="Nom de la commune"
-                    value="@Model?.Name" asp-for="Name" />
+                    id="Nom" placeholder="Nom de la commune"
+                    value="@Model?.Nom" asp-for="Nom" />
                 <label for="Longitude" class="control-label">Longitude :</label>
                 <input type="number" class="form-control"
                     id="Longitude" placeholder="@Model?.Longitude"
