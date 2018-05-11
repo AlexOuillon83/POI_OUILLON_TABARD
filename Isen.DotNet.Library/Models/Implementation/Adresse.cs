@@ -12,14 +12,15 @@ namespace Isen.DotNet.Library.Models.Implementation
 
         public Commune Commune { get; set; }
 
+        public Departement Departement {get; set;}
+
         public float Longitude {get; set; }
 
         public float Latitude {get; set; }
 
-
         //Variable Texte ne retourne rien 
         public override string ToString(){
-            return String.Format("Texte: {0}, {1} {2} - ({3},{4})", Texte, ZipCode, Commune?.Nom, Longitude, Latitude);
+            return String.Format("Texte: {0}, {1} {2} - ({3},{4}) - Dep: {5}", Texte, ZipCode, Commune?.Nom, Longitude, Latitude, Departement?.Nom);
         }
 
         public override dynamic ToDynamic()
@@ -30,6 +31,8 @@ namespace Isen.DotNet.Library.Models.Implementation
             response.zipcode = ZipCode;
             response.latitude = Latitude;
             response.longitude = Longitude;
+            response.commune = Commune;
+            response.departement = Departement; 
             return response;
         }
     }

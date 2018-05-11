@@ -19,6 +19,8 @@ namespace Isen.DotNet.Library.Data
 
         private readonly IPointInteretRepository _pointInteretRepository;
 
+        private readonly IDepartementRepository _departementRepository;
+
         public SeedData(
             ApplicationDbContext context,
             ILogger<SeedData> logger,
@@ -27,7 +29,8 @@ namespace Isen.DotNet.Library.Data
             ICommuneRepository communeRepository,
             ICategorieRepository categorieRepository,
             IPointInteretRepository pointInteretRepository,
-            IAdresseRepository adresseRepository)
+            IAdresseRepository adresseRepository,
+            IDepartementRepository departementRepository)
         {
             _context = context;
             _logger = logger;
@@ -37,6 +40,7 @@ namespace Isen.DotNet.Library.Data
             _categorieRepository = categorieRepository;
             _pointInteretRepository = pointInteretRepository;
             _adresseRepository = adresseRepository;
+            _departementRepository = departementRepository;
         }
 
         public void DropDatabase()
@@ -101,6 +105,27 @@ namespace Isen.DotNet.Library.Data
             _logger.LogWarning("Added communes");
         }
 
+        public void AddDepartements(){
+            if (_departementRepository.GetAll().Any()) return;
+            _logger.LogWarning("Adding departement");
+
+            var departements = new List<Departement>
+            {
+                new Departement { Nom = "Var" },
+                new Departement { Nom = "Bouches du Rhône" },
+                new Departement { Nom = "Alpes Maritimes" },
+                new Departement { Nom = "Hautes-Alpes" },
+                new Departement { Nom = "Alpes de Haute-Provence" },
+                new Departement { Nom = "Vaucluse" }
+                
+                
+            };
+            _departementRepository.UpdateRange(departements);
+            _departementRepository.Save();
+
+            _logger.LogWarning("Added departements");
+        }
+
         public void AddPointInterets(){
             if (_pointInteretRepository.GetAll().Any()) return;
             _logger.LogWarning("Adding point interet");
@@ -108,10 +133,14 @@ namespace Isen.DotNet.Library.Data
             var pointInterets = new List<PointInteret>
             {
                 new PointInteret { 
-                    Name = "Toulon"
+                    Name = "Le Mourillon",
+                    Adresse = new Adresse { Texte = "14 Rue Chevalier Paul", ZipCode = "83000", Longitude = 43, Latitude = 6, Commune = new Commune{Name = "Toulon"}},
+                    Descriptif = "Venez le mardi, Bd de Strasbourd : KFC >>> double vé ash e ygrec",
                     },
                 new PointInteret { 
-                    Name = "Marseille"
+                    Name = "Vieux-port",
+                    Adresse = new Adresse {Texte = " Vieux-port", ZipCode = "13000", Longitude = 43 , Latitude = 5, Commune = new Commune{Name = "Marseille"}},
+                    Descriptif = "Ville sportive, avec un joli port",
                     }
             };
             _pointInteretRepository.UpdateRange(pointInterets);

@@ -12,6 +12,8 @@ namespace Isen.DotNet.Library.Data
         public DbSet<Categorie> CategorieCollection { get; set; }
         public DbSet<Adresse> AdresseCollection { get; set; }
         public DbSet<PointInteret> PointInteretCollection { get; set; }
+        public DbSet<Departement> DepartementCollection { get; set; }
+
 
         public ApplicationDbContext(
             DbContextOptions<ApplicationDbContext> options) 
@@ -52,6 +54,11 @@ namespace Isen.DotNet.Library.Data
             builder.Entity<Adresse>()
                 .ToTable("Adresse")
                 .HasOne(p => p.Commune);
-        }
+            
+            builder.Entity<Departement>()
+                .ToTable("Departement");
+
+                }
+            
     }
 }

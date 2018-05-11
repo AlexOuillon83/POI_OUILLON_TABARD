@@ -33,4 +33,17 @@
                 }
             }
         </select>
+        <label for="Departement" class="control-label">Departement :</label>
+        <select class="form-control"
+            id="Departement" placeholder="Departement"
+            value="@Model?.Departement"
+            name="Departement">
+            @if (ViewBag.Departements != null)
+            {
+                @foreach (Departement departement in ViewBag.Departements)
+                {
+                    <option value="@departement?.Id">@departement?.Nom</option>
+                }
+            }
+        </select>
     </div>

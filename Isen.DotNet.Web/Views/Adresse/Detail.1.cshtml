@@ -45,6 +45,20 @@
                         }
                     }
                 </select>
+                <label for="Departement" class="control-label">Departement :</label>
+                <select class="form-control"
+                    id="Departement" placeholder="Departement"
+                    value="@Model?.Departement"
+                    name="Departement">
+                    @if (ViewBag.Departements != null)
+                    {
+                        @foreach (Departement departement in ViewBag.Departements)
+                        {
+                            <option value="@departement?.Id">@departement?.Name</option>
+                        }
+                    }
+                </select>
+
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />

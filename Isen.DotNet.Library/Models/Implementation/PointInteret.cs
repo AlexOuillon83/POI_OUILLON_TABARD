@@ -9,10 +9,7 @@ namespace Isen.DotNet.Library.Models.Implementation {
         public Categorie Categorie { get; set; }
         public string _nom;
         public string _descriptif;
-        public Categorie  _categorie;
-
-        public Commune Commune { get; set; }
-
+        
         public override string Name {
             get { return Nom; }
             set { Nom = value; }

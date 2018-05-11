@@ -17,14 +17,17 @@ namespace Isen.DotNet.Web.Controllers
     public class AdresseController : BaseController<Adresse>
     {
         private readonly ICommuneRepository _communeRepo;
+        private readonly IDepartementRepository _departementRepo;
 
         public AdresseController(
             ILogger<AdresseController> logger,
             IAdresseRepository repository,
+            IDepartementRepository departementRepo,
             ICommuneRepository communeRepo)
             : base(logger, repository)
         {
             _communeRepo = communeRepo;
+            _departementRepo = departementRepo;
         }
 
         [HttpPost]
@@ -39,7 +42,7 @@ namespace Isen.DotNet.Web.Controllers
         * Controller d'ajout et d'édition de l'adresse
         */
         [HttpPost]
-        public IActionResult Ajout(int Id, string Texte, string ZipCode, float Longitude, float Latitude, int Commune)
+        public IActionResult Ajout(int Id, string Texte, string ZipCode, float Longitude, float Latitude, int Commune, int Departement)
         {
             // Création d'une nouvelle adresse si elle n'existe pas
             Adresse model = _repository.Single(Id);
@@ -51,7 +54,10 @@ namespace Isen.DotNet.Web.Controllers
             model.Longitude = Longitude;
             model.Latitude = Latitude;
             Commune commune = _communeRepo.Single(Commune);
+            Departement departement = _departementRepo.Single(Departement);
+            model.Departement = departement;
             model.Commune = commune;
+
 
             // Affichage de l'adresse à ajouter
             _logger.LogWarning(model.ToString());
@@ -64,6 +70,7 @@ namespace Isen.DotNet.Web.Controllers
         public override IActionResult Detail(int? id){
             // Récupération de la liste des communes
             ViewBag.Communes = _communeRepo.GetAll();
+            ViewBag.Departements = _departementRepo.GetAll(); 
             _logger.LogWarning("Controller de formulaire d'ajout");
 
             // Pas d'id > form vide (création)

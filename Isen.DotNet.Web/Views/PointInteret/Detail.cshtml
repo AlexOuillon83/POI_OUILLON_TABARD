@@ -27,6 +27,7 @@
                     id="Descriptif" placeholder="Descriptif"
                     value="@Model?.Descriptif" asp-for="Descriptif" />
             </div>
+
             <div>
                 @await Component.InvokeAsync("AdresseForm", new { adresse = @Model?.Adresse, communes = ViewBag.Communes })
             </div>
@@ -41,11 +42,12 @@
                     {
                         @foreach (Categorie categorie in ViewBag.Categories)
                         {
-                            <option value="@categorie?.Id">@categorie.Nom</option>
+                            <option value="@categorie?.Id">@categorie?.Nom</option>
                         }
                     }
                 </select>
-            </div>  
+            </div>
+
 
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />

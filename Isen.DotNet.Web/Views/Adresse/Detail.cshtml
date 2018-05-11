@@ -14,7 +14,7 @@
     <div class="col-md-12">
         <form class="form-horizontal" asp-action="Ajout">
             <div>
-                @await Component.InvokeAsync("AdresseForm", new { adresse = @Model, communes = ViewBag.Communes })
+                @await Component.InvokeAsync("AdresseForm", new { adresse = @Model, communes = ViewBag.Communes, departements = ViewBag.Departements })
             </div>
             <br />
             <input type="submit" class="btn btn-primary" value="Valider" />

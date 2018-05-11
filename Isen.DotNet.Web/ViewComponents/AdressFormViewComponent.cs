@@ -16,9 +16,10 @@ namespace ViewComponentSample.ViewComponents
         }
 
         public async Task<IViewComponentResult> InvokeAsync(
-        Adresse adresse, IEnumerable<Commune> communes)
+        Adresse adresse, IEnumerable<Commune> communes, IEnumerable<Departement> departements)
         {
             ViewBag.Communes = communes;
+            ViewBag.Departements = departements;
             return View(adresse);
         }
     }

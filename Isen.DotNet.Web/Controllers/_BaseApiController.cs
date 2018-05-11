@@ -36,6 +36,15 @@ namespace Isen.DotNet.Web.Controllers
             return Json(single);
         }
 
+        [HttpGet]
+        [Route("api/[controller]/{name}")]
+        public virtual JsonResult GetByCategorie(string name)
+        {
+            var single = _repository.Single(name);
+            return Json(single);
+        }
+
+
         [HttpPost]
         [Route("api/[controller]")]
         public virtual JsonResult Create([FromBody] T model)

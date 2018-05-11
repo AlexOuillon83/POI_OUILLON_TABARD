@@ -20,6 +20,7 @@
                 <th>#</th>
                 <th>Texte</th>
                 <th>Commune</th>
+                <th> Departement </th>
                 <th>Code postal</th>
                 <th>Longitude</th>
                 <th>Latitude</th>
@@ -36,7 +37,15 @@
                     <td>@adresse.Commune.Nom</td>
                 } else
                 {
-                    <td>Aucune commune</td>
+                    <td>Aucune adresse</td>
+                }
+
+                @if (adresse.Departement != null)
+                {
+                    <td>@adresse.Departement.Nom</td>
+                } else
+                {
+                    <td>Aucun departement</td>
                 }
                 <td>@adresse.ZipCode</td>
                 <td>@adresse.Longitude</td>

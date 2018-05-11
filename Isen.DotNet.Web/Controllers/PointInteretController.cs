@@ -99,5 +99,25 @@ namespace Isen.DotNet.Web.Controllers
             var model = _repository.Single(id.Value);
             return View(model);
         }
+
+
+                [HttpGet]
+        [Route("api/[controller]")]
+        public override JsonResult GetAll()
+        {
+            var all = _repository
+                .GetAll()
+                .Select(t => t.ToDynamic())
+                .ToList();
+            return Json(all);
+        }
+
+        [HttpGet]
+        [Route("api/[controller]/{id}")]
+        public override JsonResult GetById(int id)
+        {
+            var single = _repository.Single(id);
+            return Json(single);
+        }
     }
 }
