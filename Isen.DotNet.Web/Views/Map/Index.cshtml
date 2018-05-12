@@ -1,7 +1,36 @@
 @using Isen.DotNet.Library.Models.Implementation;
 @{
-    ViewData["Title"] = "Points Interets Touristiques";
+    ViewData["Title"] = "Mappage des Points Interets Touristiques";
 }
-@model IEnumerable<PointInteret>
+@model IEnumerable<Map>
 
-    
+<!-- Affichage d'une map Google , 
+    Le style et le script sont dans le _Layout.cshtml
+-->
+<div id="map" style="width:400px;height:400px">
+<script>
+    function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(43, 6.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    } 
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyASr3XVw1hSBMhXzUvW8M_aold9ebzUSbI"></script> 
+
+
+<script>
+    function addMarker(@model model){
+        foreach(var poi in model){
+            /*
+                new marker{
+                    marker.title = poi.Nom; 
+                    marker.description = poi.Descriptif 
+                    etc ..
+                }
+            */
+        }
+    }    
+</script>

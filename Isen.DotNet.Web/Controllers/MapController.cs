@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Isen.DotNet.Web.Controllers
 {
-    public class MapController{
+    public class MapController : Controller{
         private readonly IPointInteretRepository _pointinteretRepo; 
         public MapController(
             ILogger<PointInteretController> logger,
@@ -20,6 +20,12 @@ namespace Isen.DotNet.Web.Controllers
         )
         {
             _pointinteretRepo = repository;    
+        }
+
+        public IActionResult Index(){            
+            ViewData["Message"] = "Your application description page.";
+            ViewBag.PointInterets = _pointinteretRepo.GetAll();
+            return View();
         }
     }
 }
