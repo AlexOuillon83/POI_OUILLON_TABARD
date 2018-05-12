@@ -101,7 +101,7 @@ namespace Isen.DotNet.Web.Controllers
         }
 
 
-                [HttpGet]
+        [HttpGet]
         [Route("api/[controller]")]
         public override JsonResult GetAll()
         {
