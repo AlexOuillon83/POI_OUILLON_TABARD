@@ -174,12 +174,12 @@ namespace Isen.DotNet.Library.Data
                 {
                     longitude = longitude.Replace(".", ",");
                     latitude = latitude.Replace(".", ",");
-                    float.Parse(longitude);
-                    float.Parse(latitude);
+                    floatLong = float.Parse(longitude);
+                    floatLat = float.Parse(latitude);
                 }
                 catch (System.Exception)
                 {
-                    // _logger.LogWarning("Unable to get 'longitude' or 'latitude'");
+                    _logger.LogWarning("Unable to get 'longitude' or 'latitude'");
                 }
 
                 // Création de la commune si besoin

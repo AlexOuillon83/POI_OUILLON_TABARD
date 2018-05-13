@@ -5,7 +5,7 @@ namespace Isen.DotNet.Library.Models.Implementation
 {
     public class Categorie: BaseModel
     {
-        public string Nom { get; set; }
+        public override string Nom { get; set; }
         public string Description { get; set;}
 
         public override dynamic ToDynamic()

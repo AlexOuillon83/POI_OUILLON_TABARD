@@ -6,7 +6,7 @@ namespace Isen.DotNet.Library.Models.Implementation
 {
     public class Departement : BaseModel
     {
-        public String Nom { get; set; }
+        public override String Nom { get; set; }
         public List<Commune> CommuneCollection { get; set; }
 
         public override dynamic ToDynamic()

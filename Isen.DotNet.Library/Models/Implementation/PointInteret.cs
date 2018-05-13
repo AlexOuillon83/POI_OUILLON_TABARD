@@ -4,7 +4,7 @@ using Isen.DotNet.Library.Models.Base;
 namespace Isen.DotNet.Library.Models.Implementation {
     public class PointInteret : BaseModel {
 
-        public string Nom { get; set; }
+        public override string Nom { get; set; }
         public Adresse Adresse { get; set; }
         public Categorie Categorie { get; set; }
         public string Description { get; set; }
