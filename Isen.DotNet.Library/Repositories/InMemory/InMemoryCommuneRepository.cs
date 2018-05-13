@@ -22,10 +22,6 @@ namespace Isen.DotNet.Library.Repositories.InMemory
                 {
                     _modelCollection = new List<Commune>
                     {
-                        new Commune { Id = 1, Name = "Toulon" },
-                        new Commune { Id = 2, Name = "Marseille" },
-                        new Commune { Id = 3, Name = "Nice" },
-                        new Commune { Id = 4, Name = "Paris" },
                         new Commune { Id = 5, Name = "Epinal" }
                     };
                 }
