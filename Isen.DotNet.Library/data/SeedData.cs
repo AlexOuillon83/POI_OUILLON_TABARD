@@ -135,7 +135,7 @@ namespace Isen.DotNet.Library.Data
         public List<PointInteret> getListePointInterets()
         {
             // Liste des catégories
-            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/poi.csv");
+            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/poi2.csv");
             var csv = new CsvReader(textReader);
             csv.Configuration.Delimiter = ",";
             List<PointInteret> pointInterets = new List<PointInteret>();

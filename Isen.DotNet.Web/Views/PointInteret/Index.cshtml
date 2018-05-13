@@ -3,7 +3,6 @@
     ViewData["Title"] = "Points Interets Touristiques";
 }
 @model IEnumerable<PointInteret>
-
 <style>
     .mapboxgl-popup {
         max-width: 400px;
@@ -61,6 +60,7 @@
                         <td>@poi.Adresse.ZipCode</td>
                     }
                     <td>@poi.Categorie?.Nom</td> 
+                    
                     <td>
                         <a class="btn btn-default" asp-controller="PointInteret" asp-action="Detail" asp-route-id="@poi.Id">Editer</a>
                         &nbsp;
@@ -72,78 +72,3 @@
         </table>
     </div>
 </div>
-<div class="row">
-    <div id="map" style="height:600px; width: 100%; position: relative !important;"></div>
-    <div class="col-sm-6" style="margin-top: 20px;">
-        <div class="row">
-            <div class="row">
-                <h4>Point d'intérêt</h4>
-            </div>
-            <div class="row">
-                <div class="thumbnail">
-                    <div class="caption">
-                        <h3 id="card-title">Informations point d'intérêt</h3>
-                        <p id="card-content">
-                            Cliquez sur un marqueur pour obtenir des informations
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    function updateCard(texte, long, lat, description){
-        document.querySelector("#card-title").innerHTML = texte;
-        pos = "";
-        pos += "Longitude: "+long+" Latitude: "+lat;
-        document.querySelector("#card-content").innerHTML = description;
-        console.log("Marker clicked!");
-    }
-
-    function addMarker(map, texte, lat, long, description){
-        console.log("Adding marker ("+long+","+lat+")");
-        console.log(texte);
-        let marker = new google.maps.Marker({
-            map:map,
-            anchorPoint: new google.maps.Point(lat, long),
-            position: new google.maps.LatLng({lat: lat, lng: long}),
-            optimized: true,
-            zIndex: 1000,
-            shape: {
-                coords: [1, 1, 1, 20, 18, 20, 18, 1],
-                type: 'poly'
-            },
-            label: {
-                color : "black",
-                text: texte,
-                fontSize: "20px"
-            },
-        });
-        marker.addListener('click', function() {
-          map.setZoom(20);
-          map.setCenter(marker.getPosition());
-          updateCard(texte, long, lat, description);
-        });
-    }
-    function myMap() {
-        var mapOptions = {
-            center: new google.maps.LatLng(43.743707,7.262745),
-            zoom: 20,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-        var lat = -1;
-        var long = -1;
-        @foreach (var item in Model){
-            <text>
-                lat = '@(item.Adresse.Longitude)';
-                lat = lat.replace(",",".");
-                long = '@(item.Adresse.Latitude)';
-                long = long.replace(",",".");
-                addMarker(map, '@(item.Nom)', parseFloat(lat), parseFloat(long), '@(item.Description)');
-            </text>
-        }
-    }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyASr3XVw1hSBMhXzUvW8M_aold9ebzUSbI"></script> 
