@@ -28,6 +28,7 @@ namespace Isen.DotNet.Library.Repositories.InMemory
                 {
                     _modelCollection = new List<PointInteret>
                     {
+                        /*
                         new PointInteret { 
                             Id = 1, 
                             Name = "Toulon", 
@@ -42,9 +43,8 @@ namespace Isen.DotNet.Library.Repositories.InMemory
                             Adresse = _adresseRepository.Single("83 000 Boulevard Streetzer"),
                             Categorie = _categorieRepository.Single("Rugby")
 
-                             },
-                        new PointInteret { Id = 3, Name = "Nice" },
-                        new PointInteret { Id = 4, Name = "Paris" }
+                             }
+                             */
                     };
                 }
                 return _modelCollection.AsQueryable();

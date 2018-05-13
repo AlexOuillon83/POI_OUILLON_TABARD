@@ -3,7 +3,6 @@
     ViewData["Title"] = "Points Interets Touristiques";
 }
 @model IEnumerable<PointInteret>
-
 <style>
     .mapboxgl-popup {
         max-width: 400px;
@@ -61,6 +60,7 @@
                         <td>@poi.Adresse.ZipCode</td>
                     }
                     <td>@poi.Categorie?.Nom</td> 
+                    
                     <td>
                         <a class="btn btn-default" asp-controller="PointInteret" asp-action="Detail" asp-route-id="@poi.Id">Editer</a>
                         &nbsp;
@@ -72,6 +72,8 @@
         </table>
     </div>
 </div>
+<<<<<<< HEAD
+=======
 <div class="row">
     <div id="map" style="height:600px; width: 100%; position: relative !important;"></div>
     <div class="col-sm-6" style="margin-top: 20px;">
@@ -153,3 +155,4 @@
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=myMap&key=AIzaSyASr3XVw1hSBMhXzUvW8M_aold9ebzUSbI"></script> 
+>>>>>>> 5fe4d72cec67446b70e5e4be818461de2cf4159b
