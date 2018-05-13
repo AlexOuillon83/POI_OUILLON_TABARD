@@ -135,7 +135,7 @@ namespace Isen.DotNet.Library.Data
         public List<PointInteret> getListePointInterets()
         {
             // Liste des catégories
-            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/poi2.csv");
+            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/poi.csv");
             var csv = new CsvReader(textReader);
             csv.Configuration.Delimiter = ",";
             List<PointInteret> pointInterets = new List<PointInteret>();
@@ -255,7 +255,7 @@ namespace Isen.DotNet.Library.Data
         {
             //Liste des communes de la région
             _logger.LogWarning("Importing 'communes' this might take a while...");
-            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/OpenDataLight.csv");
+            StreamReader textReader = File.OpenText("../Isen.Dotnet.Library/Data/OpenData.csv");
             var csv = new CsvReader(textReader);
             csv.Configuration.Delimiter = ";";
             List<Commune> communes = new List<Commune>();

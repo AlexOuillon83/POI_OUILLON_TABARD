@@ -1,9 +1,7 @@
 Nom,Descriptif,Categorie,Texte,ZipCode,Longitude,Latitude,Commune
 Pharmacie Aire Saint Michel,Petite pharmacie dans les collines,Pharmacie,45 Avenue Jules Romain,06100,43.743707,7.262745,Nice
-<<<<<<< HEAD
 Bowling,Bowling à proximité de La Garde,Loisirs,563 Chemin des Plantades,83130,43.143019,6.024460,La Garde
 Laserstar,Centre de LaserGame à proximité de La Garde,Loisirs,655 Chemin des Plantades,83130,43.143152,6.023968,La Garde
-=======
 Cinema Liberte,Cinéma Pathé situé à côté de la place de la liberté,Loisirs,265 Boulevard Maréchal Leclerc,83000,43.125773,5.929112,Toulon
 Bowling,Bowling à proximité de La Garde,Loisirs,563 Chemin des Plantades,83130,43.143019,6.024460,La Garde
 Laserstar,Centre de LaserGame à proximité de La Garde,Loisirs,655 Chemin des Plantades,83130,43.143152,6.023968,La Garde
@@ -23,4 +21,3 @@ Burger King,Restaurant gastronomique,Restauration,Place Georges Pompidou,83000,4
 McDonald,Restautant de haute qualité,Restauration,44 Boulevard de Strasbourg,83000,43.1250879,5.9301284,Toulon
 Sushi Shop,Restaurant de sushis,Restauration,61 Place de la Liberté,83000,43.1261154,5.9276732,Toulon
 Gare SNCF,Gare SNCF et gare routière,Touristique,Place de l'Europe,83000,43.1281779,5.9271983,Toulon
->>>>>>> 5fe4d72cec67446b70e5e4be818461de2cf4159b
