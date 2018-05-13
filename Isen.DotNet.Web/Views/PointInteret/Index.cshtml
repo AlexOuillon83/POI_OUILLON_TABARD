@@ -134,7 +134,7 @@
     }
     function myMap() {
         var mapOptions = {
-            center: new google.maps.LatLng(43.743707,7.262745),
+            center: new google.maps.LatLng(43.1201056,5.9348037),
             zoom: 20,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         }
@@ -147,7 +147,7 @@
                 lat = lat.replace(",",".");
                 long = '@(item.Adresse.Latitude)';
                 long = long.replace(",",".");
-                addMarker(map, '@(item.Nom)', parseFloat(lat), parseFloat(long), '@(item.Description)', '@(item.Adresse.Texte)', '@(item.Adresse.ZipCode)', '@(item.Adresse.Commune)');
+                addMarker(map, '@(item.Nom)', parseFloat(lat), parseFloat(long), '@(item.Description)', '@(item.Adresse.Texte)', '@(item.Adresse.ZipCode)', '@(item.Adresse.Commune.Nom)');
             </text>
         }
     }
