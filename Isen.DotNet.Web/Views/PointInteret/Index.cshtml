@@ -86,6 +86,11 @@
                         <p id="card-content">
                             Cliquez sur un marqueur pour obtenir des informations
                         </p>
+                        <p>
+                            <i id="card-adresse">
+
+                            </i>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -93,15 +98,16 @@
     </div>
 </div>
 <script>
-    function updateCard(texte, long, lat, description){
+    function updateCard(texte, long, lat, description, adresse, zipcode, commune){
         document.querySelector("#card-title").innerHTML = texte;
         pos = "";
         pos += "Longitude: "+long+" Latitude: "+lat;
         document.querySelector("#card-content").innerHTML = description;
+        document.querySelector("#card-adresse").innerHTML = adresse+" "+zipcode+","+commune;
         console.log("Marker clicked!");
     }
 
-    function addMarker(map, texte, lat, long, description){
+    function addMarker(map, texte, lat, long, description, adresse, zipcode, commune){
         console.log("Adding marker ("+long+","+lat+")");
         console.log(texte);
         let marker = new google.maps.Marker({
@@ -123,7 +129,7 @@
         marker.addListener('click', function() {
           map.setZoom(20);
           map.setCenter(marker.getPosition());
-          updateCard(texte, long, lat, description);
+          updateCard(texte, long, lat, description, adresse, zipcode, commune);
         });
     }
     function myMap() {
@@ -141,7 +147,7 @@
                 lat = lat.replace(",",".");
                 long = '@(item.Adresse.Latitude)';
                 long = long.replace(",",".");
-                addMarker(map, '@(item.Nom)', parseFloat(lat), parseFloat(long), '@(item.Description)');
+                addMarker(map, '@(item.Nom)', parseFloat(lat), parseFloat(long), '@(item.Description)', '@(item.Adresse.Texte)', '@(item.Adresse.ZipCode)', '@(item.Adresse.Commune)');
             </text>
         }
     }
