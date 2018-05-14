@@ -183,6 +183,7 @@ namespace Isen.DotNet.Library.Data
                 }
 
                 // Création de la commune si besoin
+                _logger.LogWarning(nomCommune);
                 Commune commune = _communeRepository.Single(nomCommune);
                 if (commune == null)
                 {

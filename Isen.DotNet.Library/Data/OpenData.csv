@@ -1952,7 +1952,6 @@ Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Dign
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;Gréoux-les-Bains;04800;04094;43.75;5.883333;2.01
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;Hautes-Duyes;04380;04177;;;
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;La Brillanne;04700;04034;43.916667;5.883333;1.18
-Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;La Garde;04120;04092;43.833333;6.55;1.56
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;La Javie;04420;04097;44.166667;6.35;0.8
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;Lambruisse;04170;04099;44.05;6.433333;1.34
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;04;Alpes-de-Haute-Provence;Digne-les-Bains;1;La Mure-Argens;04170;04136;;;
@@ -2291,11 +2290,9 @@ Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;05;Hautes-Alpes;Gap;2;Vars;0556
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;05;Hautes-Alpes;Gap;2;Villar-d'Arêne;05480;05181;45.04225;6.33711;-1
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;05;Hautes-Alpes;Gap;2;Villar-Loubière;05800;05182;44.833333;6.133333;1.86
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;05;Hautes-Alpes;Gap;2;Villar-Saint-Pancrace;05100;05183;44.866667;6.633333;2.01
-Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;1;Nice;06000;06088;43.7;7.25;1.08
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;2;Nice;06000;06088;43.7;7.25;1.08
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;3;Falicon;06950;06060;43.75;7.283333;1.01
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;3;La Trinité;06340;06149;43.75;7.316667;1.2
-Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;3;Nice;06000;06088;43.7;7.25;1.08
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;3;Saint-André de la Roche;06730;06114;43.733333;7.283333;1.01
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;4;Beaulieu-sur-Mer;06310;06011;43.7;7.333333;1.29
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;4;Beausoleil;06240;06012;43.75;7.433333;1.86
@@ -2360,7 +2357,6 @@ Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Lieuc
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Malaussène;06710;06078;43.916667;7.133333;0.72
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Marie;06420;06080;44.033333;7.133333;1.4
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Massoins;06710;06082;43.933333;7.133333;0.66
-Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Nice;06000;06088;43.7;7.25;1.08
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Péone;06470;06094;44.116667;6.9;2.02
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Pierlas;06260;06096;44.033333;7.033333;1.6
 Sud-Est;93;Provence-Alpes-Côte d'Azur;Marseille;06;Alpes-Maritimes;Nice;5;Pierrefeu;06910;06097;43.866667;7.083333;1.95
@@ -14792,7 +14788,6 @@ Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;Entraigues;38740;38154;;;
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;Fontaine;38600;38169;45.183333;5.666667;0.74
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;Gresse-en-Vercors;38650;38186;44.9;5.566667;2.13
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;Huez;38750;38191;45.083333;6.05;2.1
-Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;La Garde;38520;38177;;;
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;Lalley;38930;38204;44.75;5.683333;2.87
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;La Morte;38350;38264;45.033333;5.85;2.03
 Sud-Est;82;Rhône-Alpes;Lyon;38;Isère;Grenoble;4;La Motte-d'Aveillans;38770;38265;44.95;5.75;1.88
